@@ -62,46 +62,6 @@
     return _longPress;
 }
 
-- (void)displayTraits {
-    
-    // which device is this?
-    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
-        NSLog(@"Running on an iPad");
-    } else {
-        NSLog(@"Running an iPhone");
-    }
-    
-    // will always return YES, no matter which device we query
-    if ([UITraitCollection traitCollectionWithForceTouchCapability:UIForceTouchCapabilityAvailable]) {
-        NSLog(@"We can do 3D Touch. W00T!");
-    } else {
-        NSLog(@"We can't do 3D Touch. Dang!");
-    }
-    
-    // using trainCollection instead
-    if (self.traitCollection.userInterfaceIdiom == UIUserInterfaceIdiomPad) {
-        NSLog(@"Running on an iPad");
-    } else {
-        NSLog(@"Running an iPhone");
-    }
-    
-    // test for 3D Touch capability
-    if (self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable) {
-        NSLog(@"We can do 3D Touch. W00T!");
-    } else {
-        NSLog(@"We can't do 3D Touch. Dang!");
-    }
-    
-    // read out all traits for the current device
-    NSLog(@"3D Touch: %ld", (long)self.traitCollection.forceTouchCapability);
-    NSLog(@"Display Scale: %f", self.traitCollection.displayScale);
-    NSLog(@"Horizontal Size Class: %ld", (long)self.traitCollection.horizontalSizeClass);
-    NSLog(@"Vertical Size Class: %ld", (long)self.traitCollection.verticalSizeClass);
-    NSLog(@"Interface Idiom: %ld", (long)self.traitCollection.userInterfaceIdiom);
-}
-
-
-
 # pragma mark - 3D Touch Delegate
 
 - (UIViewController *)previewingContext:(id<UIViewControllerPreviewing>)previewingContext viewControllerForLocation:(CGPoint)location {

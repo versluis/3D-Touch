@@ -74,10 +74,10 @@
             </objects>
             <point key="canvasLocation" x="2830" y="545"/>
         </scene>
-        <!--View Controller-->
+        <!--Commit View Controller-->
         <scene sceneID="aUy-kZ-PPH">
             <objects>
-                <viewController storyboardIdentifier="CommitView" id="qiH-uT-E9v" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CommitView" id="qiH-uT-E9v" customClass="CommitViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Nmi-Gx-aCp"/>
                         <viewControllerLayoutGuide type="bottom" id="Hjn-qN-ZXf"/>

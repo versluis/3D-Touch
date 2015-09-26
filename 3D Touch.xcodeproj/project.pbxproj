@@ -16,6 +16,7 @@
 		D20FACCC1BB039DF00662806 /* _D_TouchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D20FACCB1BB039DF00662806 /* _D_TouchTests.m */; };
 		D20FACD71BB039DF00662806 /* _D_TouchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D20FACD61BB039DF00662806 /* _D_TouchUITests.m */; };
 		D2BC2F211BB0B8820095982B /* PreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BC2F201BB0B8820095982B /* PreviewViewController.m */; settings = {ASSET_TAGS = (); }; };
+		D2EF66901BB630030043EB38 /* CommitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EF668F1BB630030043EB38 /* CommitViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		D20FACD81BB039DF00662806 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2BC2F1F1BB0B8820095982B /* PreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreviewViewController.h; sourceTree = "<group>"; };
 		D2BC2F201BB0B8820095982B /* PreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreviewViewController.m; sourceTree = "<group>"; };
+		D2EF668E1BB630030043EB38 /* CommitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitViewController.h; sourceTree = "<group>"; };
+		D2EF668F1BB630030043EB38 /* CommitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommitViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				D20FACB81BB039DE00662806 /* ViewController.m */,
 				D2BC2F1F1BB0B8820095982B /* PreviewViewController.h */,
 				D2BC2F201BB0B8820095982B /* PreviewViewController.m */,
+				D2EF668E1BB630030043EB38 /* CommitViewController.h */,
+				D2EF668F1BB630030043EB38 /* CommitViewController.m */,
 				D20FACBA1BB039DE00662806 /* Main.storyboard */,
 				D20FACBD1BB039DE00662806 /* Assets.xcassets */,
 				D20FACBF1BB039DE00662806 /* LaunchScreen.storyboard */,
@@ -212,6 +217,7 @@
 				TargetAttributes = {
 					D20FACAD1BB039DE00662806 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = F34HMY85N9;
 					};
 					D20FACC61BB039DF00662806 = {
 						CreatedOnToolsVersion = 7.0;
@@ -279,6 +285,7 @@
 				D20FACB61BB039DE00662806 /* AppDelegate.m in Sources */,
 				D20FACB31BB039DE00662806 /* main.m in Sources */,
 				D2BC2F211BB0B8820095982B /* PreviewViewController.m in Sources */,
+				D2EF66901BB630030043EB38 /* CommitViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,11 +426,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "3D Touch/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.versluis.-D-Touch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -431,11 +441,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "3D Touch/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.versluis.-D-Touch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

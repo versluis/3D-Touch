@@ -12,6 +12,7 @@
 @interface ViewController () <UIViewControllerPreviewingDelegate>
 
 @property (nonatomic, strong) UILongPressGestureRecognizer *longPress;
+@property (nonatomic, strong) PreviewViewController *previewController;
 
 @end
 
@@ -62,9 +63,23 @@
     return _longPress;
 }
 
+- (PreviewViewController *)previewController {
+    
+    if (!_previewController) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        _previewController = [storyboard instantiateViewControllerWithIdentifier:@"PreviewView"];
+    }
+    return _previewController;
+}
+
 # pragma mark - 3D Touch Delegate
 
 - (UIViewController *)previewingContext:(id<UIViewControllerPreviewing>)previewingContext viewControllerForLocation:(CGPoint)location {
+    
+    // check if we're not already displaying a preview controller
+    if ([self.presentedViewController isKindOfClass:[PreviewViewController class]]) {
+        return nil;
+    }
     
     // shallow press: return the preview controller here (peek)
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];

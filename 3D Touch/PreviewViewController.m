@@ -62,8 +62,13 @@
     // add them to an arrary
     NSArray *actions = @[action1, action2, action3];
     
+    UIPreviewActionGroup *group1 = [UIPreviewActionGroup actionGroupWithTitle:@"Action Group" style:UIPreviewActionStyleDefault actions:actions];
+    NSArray *group = @[group1];
+    
     // and return them
-    return actions;
+    return group;
 }
+
+
 
 @end

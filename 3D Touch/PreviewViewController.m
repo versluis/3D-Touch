@@ -62,10 +62,11 @@
     // add them to an arrary
     NSArray *actions = @[action1, action2, action3];
     
+    // add all actions to a group
     UIPreviewActionGroup *group1 = [UIPreviewActionGroup actionGroupWithTitle:@"Action Group" style:UIPreviewActionStyleDefault actions:actions];
     NSArray *group = @[group1];
     
-    // and return them
+    // and return them (return the array of actions instead to see all items ungrouped)
     return group;
 }
 

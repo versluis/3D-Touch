@@ -12,7 +12,6 @@
 @interface ViewController () <UIViewControllerPreviewingDelegate>
 
 @property (nonatomic, strong) UILongPressGestureRecognizer *longPress;
-@property (nonatomic, strong) PreviewViewController *previewController;
 
 @end
 
@@ -61,15 +60,6 @@
         [self.view addGestureRecognizer:_longPress];
     }
     return _longPress;
-}
-
-- (PreviewViewController *)previewController {
-    
-    if (!_previewController) {
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        _previewController = [storyboard instantiateViewControllerWithIdentifier:@"PreviewView"];
-    }
-    return _previewController;
 }
 
 # pragma mark - 3D Touch Delegate

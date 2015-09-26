@@ -8,7 +8,7 @@
 
 #import "PreviewViewController.h"
 
-@interface PreviewViewController () <UIPreviewActionItem>
+@interface PreviewViewController ()
 
 @end
 
@@ -45,9 +45,7 @@
 #pragma mark - Preview Actions
 
 - (NSArray<id<UIPreviewActionItem>> *)previewActionItems {
-    
-    [super previewActionItems];
-    
+        
     // setup a list of preview actions
     UIPreviewAction *action1 = [UIPreviewAction actionWithTitle:@"Action 1" style:UIPreviewActionStyleDefault handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
         NSLog(@"Action 1 triggered");

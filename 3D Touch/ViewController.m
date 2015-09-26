@@ -62,6 +62,7 @@
     return _longPress;
 }
 
+
 # pragma mark - 3D Touch Delegate
 
 - (UIViewController *)previewingContext:(id<UIViewControllerPreviewing>)previewingContext viewControllerForLocation:(CGPoint)location {
@@ -97,6 +98,7 @@
     
     [self check3DTouch];
 }
+
 
 #pragma mark - 3D Touch Alternative
 

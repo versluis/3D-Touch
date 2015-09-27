@@ -16,7 +16,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    // [self createDynamicShortcutItems];
+    [self createItemsWithIcons];
+    
+    // determine whether we've launched from a shortcut item or not
+    UIApplicationShortcutItem *item = [launchOptions valueForKey:UIApplicationLaunchOptionsShortcutItemKey];
+    if (item) {
+        NSLog(@"We've launched from shortcut item: %@", item.localizedTitle);
+    } else {
+        NSLog(@"We've launched properly.");
+    }
+    
     return YES;
 }
 
@@ -41,5 +52,48 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+# pragma mark - Springboard Shortcut Items (dynamic)
+
+- (void)createDynamicShortcutItems {
+    
+    // create several (dynamic) shortcut items
+    UIApplicationShortcutItem *item1 = [[UIApplicationShortcutItem alloc]initWithType:@"Item 1" localizedTitle:@"Item 1"];
+    UIApplicationShortcutItem *item2 = [[UIApplicationShortcutItem alloc]initWithType:@"Item 2" localizedTitle:@"Item 2"];
+    UIApplicationShortcutItem *item3 = [[UIApplicationShortcutItem alloc]initWithType:@"Item 3" localizedTitle:@"Item 3"];
+    
+    // add all items to an array
+    NSArray *items = @[item1, item2, item3];
+    
+    // add the array to our app
+    [UIApplication sharedApplication].shortcutItems = items;
+}
+
+- (void)createItemsWithIcons {
+    
+    // create some system icons
+    UIApplicationShortcutIcon *loveIcon = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeLove];
+    UIApplicationShortcutIcon *mailIcon = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeMail];
+    UIApplicationShortcutIcon *prohibitIcon = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeProhibit];
+    
+    // create several (dynamic) shortcut items
+    UIApplicationShortcutItem *item1 = [[UIApplicationShortcutItem alloc]initWithType:@"Love" localizedTitle:@"Love Item" localizedSubtitle:@"Describe what it does here" icon:loveIcon userInfo:nil];
+    UIApplicationShortcutItem *item2 = [[UIApplicationShortcutItem alloc]initWithType:@"Mail" localizedTitle:@"Mail Item" localizedSubtitle:@"Send some mail" icon:mailIcon userInfo:nil];
+    UIApplicationShortcutItem *item3 = [[UIApplicationShortcutItem alloc]initWithType:@"Prohibited" localizedTitle:@"Prohibited" localizedSubtitle:@"Like totally disallowed" icon:prohibitIcon userInfo:nil];
+    
+    // add all items to an array
+    NSArray *items = @[item1, item2, item3];
+    
+    // add the array to our app
+    [UIApplication sharedApplication].shortcutItems = items;
+}
+
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler {
+    
+    // react to shortcut item selections
+    NSLog(@"A shortcut item was pressed. It was %@.", shortcutItem.localizedTitle);
+}
+
+
 
 @end

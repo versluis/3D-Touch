@@ -89,8 +89,11 @@
     // add all items to an array
     NSArray *items = @[item1, item2, item3];
     
-    // add the array to our app
-    [UIApplication sharedApplication].shortcutItems = items;
+    // add this array to the potentially existing static UIApplicationShortcutItems
+    NSArray *existingItems = [UIApplication sharedApplication].shortcutItems;
+    NSArray *updatedItems = [existingItems arrayByAddingObjectsFromArray:items];
+    [UIApplication sharedApplication].shortcutItems = updatedItems;
+
 }
 
 - (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler {

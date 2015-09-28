@@ -6,3 +6,7 @@ If 3D Touch is available, the Main View will bring up a Preview View upon shallo
 If 3D Touch is not available, a long press recognizer is implemented and calls the Preview View. Tapping the Preview View will transition back to the Main View. 
 
 Should the user disable 3D Touch while the app is running, the alternative long press recognizer is activated automatically (and disabled again if 3D Touch becomes available again).
+
+### Shortcut Items
+I've also added dynamic shortcut items to this project. I've explained how to do this here: 
+ - http://pinkstone.co.uk/3d-touch-in-ios-9-part-3-adding-dynamic-shortcut-items/

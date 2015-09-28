@@ -71,15 +71,20 @@
 
 - (void)createItemsWithIcons {
     
-    // create some system icons
-    UIApplicationShortcutIcon *loveIcon = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeLove];
-    UIApplicationShortcutIcon *mailIcon = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeMail];
-    UIApplicationShortcutIcon *prohibitIcon = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeProhibit];
+    // create some system icons (doesn't work)
+//    UIApplicationShortcutIcon *loveIcon = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeLove];
+//    UIApplicationShortcutIcon *mailIcon = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeMail];
+//    UIApplicationShortcutIcon *prohibitIcon = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeProhibit];
+    
+    // icons with my own images
+    UIApplicationShortcutIcon *icon1 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"iCon1"];
+    UIApplicationShortcutIcon *icon2 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"iCon2"];
+    UIApplicationShortcutIcon *icon3 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"iCon3"];
     
     // create several (dynamic) shortcut items
-    UIApplicationShortcutItem *item1 = [[UIApplicationShortcutItem alloc]initWithType:@"Love" localizedTitle:@"Love Item" localizedSubtitle:@"Describe what it does here" icon:loveIcon userInfo:nil];
-    UIApplicationShortcutItem *item2 = [[UIApplicationShortcutItem alloc]initWithType:@"Mail" localizedTitle:@"Mail Item" localizedSubtitle:@"Send some mail" icon:mailIcon userInfo:nil];
-    UIApplicationShortcutItem *item3 = [[UIApplicationShortcutItem alloc]initWithType:@"Prohibited" localizedTitle:@"Prohibited" localizedSubtitle:@"Like totally disallowed" icon:prohibitIcon userInfo:nil];
+    UIMutableApplicationShortcutItem *item1 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"com.test.love" localizedTitle:@"Love Switch" localizedSubtitle:@"Describe what it does here" icon:icon1 userInfo:nil];
+    UIMutableApplicationShortcutItem *item2 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"com.test.mail" localizedTitle:@"Inbox Me" localizedSubtitle:@"Send some mail" icon:icon2 userInfo:nil];
+    UIMutableApplicationShortcutItem *item3 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"com.test.prohibited" localizedTitle:@"Prohibited" localizedSubtitle:@"Like totally disallowed" icon:icon3 userInfo:nil];
     
     // add all items to an array
     NSArray *items = @[item1, item2, item3];

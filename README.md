@@ -12,6 +12,6 @@ I've described how to implement these things in the following two articles:
  - http://pinkstone.co.uk/how-to-use-3d-touch-in-ios-9-part-2-preview-actions/
 
 ### Shortcut Items
-I've also added dynamic shortcut items to this project. I've explained how to do this here: 
+I've also added static and dynamic shortcut items to this project. I've explained how to do this here: 
  - http://pinkstone.co.uk/3d-touch-in-ios-9-part-3-adding-dynamic-shortcut-items/
  - http://pinkstone.co.uk/3d-touch-in-ios-9-part-4-adding-static-shortcut-items/

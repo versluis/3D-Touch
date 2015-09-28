@@ -15,8 +15,8 @@
 		D20FACC11BB039DE00662806 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D20FACBF1BB039DE00662806 /* LaunchScreen.storyboard */; };
 		D20FACCC1BB039DF00662806 /* _D_TouchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D20FACCB1BB039DF00662806 /* _D_TouchTests.m */; };
 		D20FACD71BB039DF00662806 /* _D_TouchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D20FACD61BB039DF00662806 /* _D_TouchUITests.m */; };
-		D2BC2F211BB0B8820095982B /* PreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BC2F201BB0B8820095982B /* PreviewViewController.m */; settings = {ASSET_TAGS = (); }; };
-		D2EF66901BB630030043EB38 /* CommitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EF668F1BB630030043EB38 /* CommitViewController.m */; settings = {ASSET_TAGS = (); }; };
+		D2BC2F211BB0B8820095982B /* PreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BC2F201BB0B8820095982B /* PreviewViewController.m */; };
+		D2EF66901BB630030043EB38 /* CommitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EF668F1BB630030043EB38 /* CommitViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -431,7 +431,7 @@
 				INFOPLIST_FILE = "3D Touch/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.versluis.-D-Touch";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.versluis.3D-Touch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -446,7 +446,7 @@
 				INFOPLIST_FILE = "3D Touch/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.versluis.-D-Touch";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.versluis.3D-Touch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

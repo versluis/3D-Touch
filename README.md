@@ -7,6 +7,10 @@ If 3D Touch is not available, a long press recognizer is implemented and calls t
 
 Should the user disable 3D Touch while the app is running, the alternative long press recognizer is activated automatically (and disabled again if 3D Touch becomes available again).
 
+I've described how to implement these things in the following two articles: 
+ - http://pinkstone.co.uk/how-to-use-3d-touch-in-ios-9-part-1-peek-and-pop/
+ - http://pinkstone.co.uk/how-to-use-3d-touch-in-ios-9-part-2-preview-actions/
+
 ### Shortcut Items
 I've also added dynamic shortcut items to this project. I've explained how to do this here: 
  - http://pinkstone.co.uk/3d-touch-in-ios-9-part-3-adding-dynamic-shortcut-items/

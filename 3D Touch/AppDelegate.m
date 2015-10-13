@@ -93,7 +93,7 @@
     UIApplicationShortcutIcon *icon3 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"iCon3"];
     
     // create several (dynamic) shortcut items
-    UIMutableApplicationShortcutItem *item1 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"com.test.love" localizedTitle:@"Love Switch" localizedSubtitle:@"Describe what it does here" icon:icon1 userInfo:nil];
+    UIMutableApplicationShortcutItem *item1 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"com.test.dynamic" localizedTitle:@"Dynamic Shortcut" localizedSubtitle:@"available after first launch" icon:icon1 userInfo:nil];
     UIMutableApplicationShortcutItem *item2 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"com.test.deep1" localizedTitle:@"Deep Link 1" localizedSubtitle:@"Launch Nav Controller" icon:icon2 userInfo:nil];
     UIMutableApplicationShortcutItem *item3 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"com.test.deep2" localizedTitle:@"Deep Link 2" localizedSubtitle:@"Launch 2nd Level" icon:icon3 userInfo:nil];
     

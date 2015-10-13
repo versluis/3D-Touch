@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -26,6 +27,16 @@
         NSLog(@"We've launched from shortcut item: %@", item.localizedTitle);
     } else {
         NSLog(@"We've launched properly.");
+    }
+    
+    // have we launched Deep Link Level 1
+    if ([item.type isEqualToString:@"com.test.deep1"]) {
+        [self launchViewController1];
+    }
+    
+    // have we launched Deep Link Level 2
+    if ([item.type isEqualToString:@"com.test.deep2"]) {
+        [self launchViewController2];
     }
     
     return YES;
@@ -83,8 +94,8 @@
     
     // create several (dynamic) shortcut items
     UIMutableApplicationShortcutItem *item1 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"com.test.love" localizedTitle:@"Love Switch" localizedSubtitle:@"Describe what it does here" icon:icon1 userInfo:nil];
-    UIMutableApplicationShortcutItem *item2 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"com.test.mail" localizedTitle:@"Inbox Me" localizedSubtitle:@"Send some mail" icon:icon2 userInfo:nil];
-    UIMutableApplicationShortcutItem *item3 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"com.test.prohibited" localizedTitle:@"Prohibited" localizedSubtitle:@"Like totally disallowed" icon:icon3 userInfo:nil];
+    UIMutableApplicationShortcutItem *item2 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"com.test.deep1" localizedTitle:@"Deep Link 1" localizedSubtitle:@"Launch Nav Controller" icon:icon2 userInfo:nil];
+    UIMutableApplicationShortcutItem *item3 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"com.test.deep2" localizedTitle:@"Deep Link 2" localizedSubtitle:@"Launch 2nd Level" icon:icon3 userInfo:nil];
     
     // add all items to an array
     NSArray *items = @[item1, item2, item3];
@@ -100,6 +111,51 @@
     
     // react to shortcut item selections
     NSLog(@"A shortcut item was pressed. It was %@.", shortcutItem.localizedTitle);
+    
+    // have we launched Deep Link Level 1
+    if ([shortcutItem.type isEqualToString:@"com.test.deep1"]) {
+        [self launchViewController1];
+    }
+    
+    // have we launched Deep Link Level 2
+    if ([shortcutItem.type isEqualToString:@"com.test.deep2"]) {
+        [self launchViewController2];
+    }
+    
+}
+
+- (void)launchViewController1 {
+    
+    // grab our storyboard
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    // and instantiate our navigation controller
+    UINavigationController *controller = [storyboard instantiateViewControllerWithIdentifier:@"DeepNav"];
+    
+    // make it the key window
+    self.window.rootViewController = controller;
+    [self.window makeKeyAndVisible];
+    
+}
+
+- (void)launchViewController2 {
+    
+    // grab our storyboard
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    // instantiate our navigation controller
+    UINavigationController *controller = [storyboard instantiateViewControllerWithIdentifier:@"DeepNav"];
+    
+    // instantiate second view controller
+    UIViewController *two = [storyboard instantiateViewControllerWithIdentifier:@"DeepLink2"];
+    
+    // now push both controllers onto the stack
+    [controller pushViewController:two animated:NO];
+    
+    // make the nav controller visible
+    self.window.rootViewController = controller;
+    [self.window makeKeyAndVisible];
+    
 }
 
 

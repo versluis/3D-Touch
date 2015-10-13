@@ -15,3 +15,8 @@ I've described how to implement these things in the following two articles:
 I've also added static and dynamic shortcut items to this project. I've explained how to do this here: 
  - http://pinkstone.co.uk/3d-touch-in-ios-9-part-3-adding-dynamic-shortcut-items/
  - http://pinkstone.co.uk/3d-touch-in-ios-9-part-4-adding-static-shortcut-items/
+
+### Deep Link Examples
+Rather than boring log messages, I've added two options for Deep Linking a navigation controller:
+ - Deep Link 1 will launch a navigation controller
+ - Deep Link 2 launches a view controller that has been pushed onto the same navigation controller

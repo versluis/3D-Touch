@@ -1,6 +1,5 @@
 # 3D Touch
-iOS 9 Demo showing how to use 3D Touch on iPhone 6s devices in Objective C. There's a Swift version of this project here:
-* https://github.com/versluis/3D-Touch-Swift
+iOS 9 Demo showing how to use 3D Touch on iPhone 6s devices in both Objective-C and Swift.
 
 If 3D Touch is available, the Main View will bring up a Preview View upon shallow press (Peek), and a Commit View when the user presses deeper (Pop).
 

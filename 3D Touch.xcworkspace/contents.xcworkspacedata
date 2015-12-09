@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:3D Touch - Swift/3D Touch Swift.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:3D Touch.xcodeproj">
    </FileRef>
 </Workspace>

@@ -11,7 +11,7 @@ import UIKit
 class CommitViewController: UIViewController {
     
     lazy var tap: UITapGestureRecognizer = {
-        let tap = UITapGestureRecognizer.init(target: self, action: "dismissMe")
+        let tap = UITapGestureRecognizer.init(target: self, action: #selector(CommitViewController.dismissMe))
         // self.view.addGestureRecognizer(tap)
         return tap
 }()

@@ -30,7 +30,7 @@ class PreviewViewController: UIViewController {
         
         // if 3D Touch is not available, add a tap gesture to dismiss this controller
         if self.traitCollection.forceTouchCapability != UIForceTouchCapability.Available {
-            let tap = UITapGestureRecognizer.init(target: self, action: "dismissMe")
+            let tap = UITapGestureRecognizer.init(target: self, action: #selector(PreviewViewController.dismissMe))
             self.view.addGestureRecognizer(tap)
         }
     }

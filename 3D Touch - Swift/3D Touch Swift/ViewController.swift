@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UIViewControllerPreviewingDelegate {
     
     lazy var longPress: UILongPressGestureRecognizer = {
-        let temp = UILongPressGestureRecognizer.init(target: self, action: "showPeek")
+        let temp = UILongPressGestureRecognizer.init(target: self, action: #selector(ViewController.showPeek))
         // self.view.addGestureRecognizer(longPress)
         return temp
     }()

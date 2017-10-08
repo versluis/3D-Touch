@@ -22,17 +22,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let item = launchOptions?[UIApplicationLaunchOptionsKey.shortcutItem]
         if item != nil {
             print("We've launched from a shortcut item: ", (item as AnyObject).localizedTitle)
+            
+            // if so, have we launched specific view controllers?
+            if (item as AnyObject).type == "com.test.deep1" {
+                self.launchViewController1()
+            }
+            
+            if (item as AnyObject).type == "com.test.deep2" {
+                self.launchViewController2()
+            }
+            
         } else {
             print("We've launched properly.")
-        }
-        
-        // launch specific view controllers
-        if (item as AnyObject).type == "com.test.deep1" {
-            self.launchViewController1()
-        }
-        
-        if (item as AnyObject).type == "com.test.deep2" {
-            self.launchViewController2()
         }
         
         
@@ -72,8 +73,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // create dynamic shortcut items
         let item1 = UIMutableApplicationShortcutItem.init(type: "com.test.dynamic", localizedTitle: "Dynamic Shortcut", localizedSubtitle: "available after first launch", icon: icon1, userInfo: nil)
-        let item2 = UIMutableApplicationShortcutItem.init(type: "com.test.deep1", localizedTitle: "Deep Link 1", localizedSubtitle: "Launch Nav Controller", icon: icon2, userInfo: nil)
-        let item3 = UIMutableApplicationShortcutItem.init(type: "com.test.deep2", localizedTitle: "Launch 2nd", localizedSubtitle: "Launch 2nd Level", icon: icon3, userInfo: nil)
+        let item2 = UIMutableApplicationShortcutItem.init(type: "com.test.deep1", localizedTitle: "Deep Link 1", localizedSubtitle: "Launch 1st Nav", icon: icon2, userInfo: nil)
+        let item3 = UIMutableApplicationShortcutItem.init(type: "com.test.deep2", localizedTitle: "Deep Link 2", localizedSubtitle: "Launch 2nd Nav", icon: icon3, userInfo: nil)
         
         // add all items to an array
         let items = [item1, item2, item3] as Array

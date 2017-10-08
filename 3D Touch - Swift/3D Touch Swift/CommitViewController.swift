@@ -31,7 +31,7 @@ class CommitViewController: UIViewController {
     func dismissMe() {
         
         // dismiss this view controller
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
 }

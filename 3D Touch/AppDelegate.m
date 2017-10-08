@@ -25,19 +25,22 @@
     UIApplicationShortcutItem *item = [launchOptions valueForKey:UIApplicationLaunchOptionsShortcutItemKey];
     if (item) {
         NSLog(@"We've launched from shortcut item: %@", item.localizedTitle);
+        
+        // if so, have we launched Deep Link Level 1?
+        if ([item.type isEqualToString:@"com.test.deep1"]) {
+            [self launchViewController1];
+        }
+        
+        // or have we launched Deep Link Level 2?
+        if ([item.type isEqualToString:@"com.test.deep2"]) {
+            [self launchViewController2];
+        }
+        
     } else {
         NSLog(@"We've launched properly.");
     }
     
-    // have we launched Deep Link Level 1
-    if ([item.type isEqualToString:@"com.test.deep1"]) {
-        [self launchViewController1];
-    }
     
-    // have we launched Deep Link Level 2
-    if ([item.type isEqualToString:@"com.test.deep2"]) {
-        [self launchViewController2];
-    }
     
     return YES;
 }

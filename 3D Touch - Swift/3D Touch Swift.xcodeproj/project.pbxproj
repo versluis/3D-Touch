@@ -202,6 +202,7 @@
 				TargetAttributes = {
 					D2E91BEF1C122F3C0037EFE0 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = F34HMY85N9;
 						LastSwiftMigration = 0830;
 					};
 					D2E91C031C122F3C0037EFE0 = {
@@ -411,6 +412,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F34HMY85N9;
 				INFOPLIST_FILE = "3D Touch Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.versluis.-D-Touch-Swift";
@@ -423,6 +425,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F34HMY85N9;
 				INFOPLIST_FILE = "3D Touch Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.versluis.-D-Touch-Swift";

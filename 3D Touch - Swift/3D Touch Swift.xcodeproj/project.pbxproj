@@ -203,16 +203,16 @@
 					D2E91BEF1C122F3C0037EFE0 = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = F34HMY85N9;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0900;
 					};
 					D2E91C031C122F3C0037EFE0 = {
 						CreatedOnToolsVersion = 7.1;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0900;
 						TestTargetID = D2E91BEF1C122F3C0037EFE0;
 					};
 					D2E91C0E1C122F3C0037EFE0 = {
 						CreatedOnToolsVersion = 7.1;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0900;
 						TestTargetID = D2E91BEF1C122F3C0037EFE0;
 					};
 				};
@@ -429,7 +429,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.versluis.-D-Touch-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -442,7 +443,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.versluis.-D-Touch-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -454,7 +456,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.versluis.-D-Touch-SwiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/3D Touch Swift.app/3D Touch Swift";
 			};
 			name = Debug;
@@ -467,7 +470,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.versluis.-D-Touch-SwiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/3D Touch Swift.app/3D Touch Swift";
 			};
 			name = Release;
@@ -479,7 +483,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.versluis.-D-Touch-SwiftUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = "3D Touch Swift";
 				USES_XCTRUNNER = YES;
 			};
@@ -492,7 +497,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.versluis.-D-Touch-SwiftUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = "3D Touch Swift";
 				USES_XCTRUNNER = YES;
 			};

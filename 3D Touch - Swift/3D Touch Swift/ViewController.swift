@@ -26,7 +26,7 @@ class ViewController: UIViewController, UIViewControllerPreviewingDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         
         // check if 3D Touch is available
         self.check3DTouch()
@@ -35,52 +35,52 @@ class ViewController: UIViewController, UIViewControllerPreviewingDelegate {
     func check3DTouch() {
         
         // register for 3D Touch (if available)
-        if self.traitCollection.forceTouchCapability == UIForceTouchCapability.Available {
+        if self.traitCollection.forceTouchCapability == UIForceTouchCapability.available {
             
-            self.registerForPreviewingWithDelegate(self, sourceView: self.view)
+            self.registerForPreviewing(with: self, sourceView: self.view)
             print("3D Touch is available. Excellent!")
             
             // and disable the long press gesture
-            self.longPress.enabled = false
+            self.longPress.isEnabled = false
 
         } else {
             
             print("3D Touch is not available. Dang!")
             
             // handle alternative long press recogniser
-            self.longPress.enabled = true
+            self.longPress.isEnabled = true
             
         }
     }
 
     // MARK: 3D Touch Delegate
     
-    func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
         
         // check if we're not already showing a preview
-        if ((self.presentedViewController?.isKindOfClass(PreviewViewController)) != nil) {
+        if ((self.presentedViewController?.isKind(of: PreviewViewController.self)) != nil) {
             return nil
         }
         
         // PEEK (shallow press): return the preview view controller here
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-        let previewView = storyboard.instantiateViewControllerWithIdentifier("PreviewView")
+        let previewView = storyboard.instantiateViewController(withIdentifier: "PreviewView")
         
         return previewView
     }
     
-    func previewingContext(previewingContext: UIViewControllerPreviewing, commitViewController viewControllerToCommit: UIViewController) {
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
         
         // POP (deep press): return the commit view controller here
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-        let commitView = storyboard.instantiateViewControllerWithIdentifier("CommitView")
+        let commitView = storyboard.instantiateViewController(withIdentifier: "CommitView")
         
-        self.showViewController(commitView, sender: self)
+        self.show(commitView, sender: self)
         
         // alternatively, use the view controller that's being provided here (viewControllerToCommit)
     }
     
-    override func traitCollectionDidChange(previousTraitCollection: UITraitCollection?) {
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         
         // called when the interface environment changes
         // one of those occasions would be if the user enables/disables 3D Touch
@@ -95,14 +95,14 @@ class ViewController: UIViewController, UIViewControllerPreviewingDelegate {
         print("showing peek")
         
         // disable long press gesture so it's not called mutiple times
-        self.longPress.enabled = false
+        self.longPress.isEnabled = false
         
         // present the preview (peek)
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-        let previewView = storyboard.instantiateViewControllerWithIdentifier("PreviewView")
+        let previewView = storyboard.instantiateViewController(withIdentifier: "PreviewView")
         
         let presenter = self.grabTopViewController()
-        presenter.showViewController(previewView, sender: self)
+        presenter.show(previewView, sender: self)
         
     }
     
@@ -112,7 +112,7 @@ class ViewController: UIViewController, UIViewControllerPreviewingDelegate {
         // avoids "view is not in the window hierarchy" error
         // http://stackoverflow.com/questions/26022756/warning-attempt-to-present-on-whose-view-is-not-in-the-window-hierarchy-sw
         
-        var top = UIApplication.sharedApplication().keyWindow?.rootViewController
+        var top = UIApplication.shared.keyWindow?.rootViewController
         while ((top?.presentedViewController) != nil) {
             top = top?.presentedViewController
         }

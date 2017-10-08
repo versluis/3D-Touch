@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("We've launched properly.")
         }
         
-        // launch specific vew controllers
+        // launch specific view controllers
         if (item as AnyObject).type == "com.test.deep1" {
             self.launchViewController1()
         }

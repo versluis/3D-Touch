@@ -28,7 +28,7 @@ class CommitViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func dismissMe() {
+    @objc func dismissMe() {
         
         // dismiss this view controller
         self.dismiss(animated: true, completion: nil)

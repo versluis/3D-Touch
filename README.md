@@ -20,3 +20,12 @@ I've also added static and dynamic shortcut items to this project. I've explaine
 Rather than boring log messages, I've added two options for Deep Linking a navigation controller:
  - Deep Link 1 will launch a navigation controller
  - Deep Link 2 launches a view controller that has been pushed onto the same navigation controller
+
+### Workspace Organisation
+This repo contains both an Objective-C and a Swift version of the project. I've added them both to the same Workspace to centralise and make it more practical to work with either project. Just in case you're not familiar with Workspaces in Xcode, here's how they work:
+
+Instead of opening the respective .xcproj file, open 3D-Touch.xcworkspace. You'll then see two projects: 
+  * 3D Touch (that's the Objective-C version), and 
+  * 3D Touch Swift (that's the Swift version). 
+  
+You can switch between each version at the top of the screen (next to the play/stop button in Xcode) and choose a different simuluator and target device for each project. You can build and focus on a single project at a time this way, but still maintain multiple projects in the same repository.

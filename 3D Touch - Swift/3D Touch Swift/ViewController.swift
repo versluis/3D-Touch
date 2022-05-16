@@ -90,7 +90,7 @@ class ViewController: UIViewController, UIViewControllerPreviewingDelegate {
     
     // MARK: 3D Touch Alternative
     
-    func showPeek() {
+    @objc func showPeek() {
         
         print("showing peek")
         
